@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "145040073981",
+    "project_id": "coorg-explorer-app",
+    "storage_bucket": "coorg-explorer-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145040073981:android:fcaad0e39a24ba8e9d8a94",
+        "android_client_info": {
+          "package_name": "com.example.coorg_explorer_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpTxb8OBXEu4wqLI0mwqXyBDbCMAdHRvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
