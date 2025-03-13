@@ -1,4 +1,5 @@
 import 'package:coorg_explorer_app/pages/nav/search_places.dart';
+import 'package:coorg_explorer_app/pages/nav/taxi_detailed_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -97,103 +98,130 @@ class TaxiHomepage extends StatelessWidget {
           ),
           // list taxi cars 1
 
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Container(
-              padding: EdgeInsets.all(12),
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.green,
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        'Sedan',
-                        style: TextStyle(
-                          fontSize: 12.sp,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TaxiDetailedPage(),
+                  // DetailedPlace(
+                  //   place: place.title,
+                  //   dest: place.subTitle,
+                  //   imageUrl: place.urlImage,
+                  //   imageOne: place.urlImage1,
+                  //   imageTwo: place.urlImage2,
+                  //   imageThree: place.urlImage3,
+                  //   facOne: "Parking",
+                  //   facTwo: "Food",
+                  //   facThree: "Guides",
+                  //   desc: place.desc,
+                  //   lat: place.lat,
+                  //   lang: place.lang,
+                  // ),
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Container(
+                padding: EdgeInsets.all(12),
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.green,
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Sedan',
+                          style: TextStyle(
+                            fontSize: 12.sp,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      Spacer(),
-                      Icon(
-                        CupertinoIcons.heart,
-                        color: Colors.red,
-                      ),
-                    ],
-                  ),
-                  // car image
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      width: double.infinity,
-                      child: Image.asset(
-                        "assets/images/etios.png",
+                        Spacer(),
+                        Icon(
+                          CupertinoIcons.heart,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                    // car image
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
                         width: double.infinity,
+                        child: Hero(
+                          tag: "taxi",
+                          child: Image.asset(
+                            "assets/images/etios.png",
+                            width: double.infinity,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'Toyoto Etios',
-                        style: TextStyle(
-                          fontSize: 18.sp,
-                          color: Colors.white,
-                          //  fontWeight: FontWeight.bold,
+                    Row(
+                      children: [
+                        Text(
+                          'Toyoto Etios',
+                          style: TextStyle(
+                            fontSize: 18.sp,
+                            color: Colors.white,
+                            //  fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      Spacer(),
-                      Icon(
-                        CupertinoIcons.person_3_fill,
-                        color: Colors.white,
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        '4 Persons',
-                        style: TextStyle(
-                          fontSize: 12.sp,
+                        Spacer(),
+                        Icon(
+                          CupertinoIcons.person_3_fill,
                           color: Colors.white,
-                          // fontWeight: FontWeight.bold,
                         ),
-                      ),
-                    ],
-                  ),
-                  Divider(),
-                  Row(
-                    children: [
-                      Text(
-                        'Daniel A',
-                        style: TextStyle(
-                          fontSize: 24.sp,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                        const SizedBox(
+                          width: 5,
                         ),
-                      ),
-                      Spacer(),
-                      Icon(
-                        Icons.star,
-                        color: Colors.yellow,
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        '4.8',
-                        style: TextStyle(
-                          fontSize: 12.sp,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                        Text(
+                          '4 Persons',
+                          style: TextStyle(
+                            fontSize: 12.sp,
+                            color: Colors.white,
+                            // fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                    Divider(),
+                    Row(
+                      children: [
+                        Text(
+                          'Daniel A',
+                          style: TextStyle(
+                            fontSize: 24.sp,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Spacer(),
+                        Icon(
+                          Icons.star,
+                          color: Colors.yellow,
+                        ),
+                        const SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          '4.8',
+                          style: TextStyle(
+                            fontSize: 12.sp,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
